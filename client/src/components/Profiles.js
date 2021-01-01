@@ -16,17 +16,20 @@ const Profiles = () => {
         fetch('https://reqres.in/api/users?page=2')
         .then((response)=>response.json())
         .then((data)=>{
-            setUserProfiles(data)
+            setUserProfiles(data.data)
         })
+        setLoading(false)
     },[])
     console.log(userProfiles)
     return (
         <div>
-          {
-              loading ? <h1></h1> : (
-                  
-              ) 
-          }
+            {
+               loading ? (<h1>Loading...</h1>) : (
+                   userProfiles.map((user)=>(
+                       <h1>{user.first_name}</h1>
+                   ))
+               )     
+            }
         </div>
     )
 }

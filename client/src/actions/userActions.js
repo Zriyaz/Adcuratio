@@ -93,7 +93,7 @@ export const login = (email, password) => async (dispatch) => {
       dispatch({
         type: PROFILES_REQUEST,
       })
-      const { data } = await axios.get('https://reqres.in/api/users?page=2')
+      const data = await axios.get('https://reqres.in/api/users?page=2')
   
       dispatch({
         type: PROFILES_REQUEST_SUCCESS,
