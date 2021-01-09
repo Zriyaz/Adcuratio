@@ -18,7 +18,7 @@ const Login = ({history}) => {
 
     useEffect(()=>{
         if(userInfo){
-            history.push("/dashborad")
+            history.push("/users")
         }
     },[history, userInfo])
 

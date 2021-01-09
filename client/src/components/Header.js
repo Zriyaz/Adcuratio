@@ -32,20 +32,15 @@ const Header = ({history}) => {
                   <i className='fas fa-home'></i> Home
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/profiles'>
-                <Nav.Link>
-                  <i className='fas fa-users mr-1'></i>Users Profile
-                </Nav.Link>
-              </LinkContainer>
             {
             userInfo ? (
             <>
-              <LinkContainer to='/dashborad'>
+               <LinkContainer to='/users'>
                 <Nav.Link>
-                  <i className='fas fa-dashborad'></i> Dashborad
+                  <i className='fas fa-users mr-1'></i>Users
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/dashborad'>
+              <LinkContainer to='/'>
                 <Nav.Link onClick={logoutHandler}>
                 <i className='mr-1 fas fa-sign-out-alt'></i>
                   Sign Out
